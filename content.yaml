@@ -47,6 +47,9 @@ stats:
 # -- Contact & Links --
 email: "oyx23@mails.tsinghua.edu.cn"
 
+# Password required to access protected links (CV, transcript, WeChat QR)
+password: "happyhappy"
+
 links:
   - icon: "email"
     url: "mailto:oyx23@mails.tsinghua.edu.cn"
@@ -57,12 +60,15 @@ links:
   - icon: "cv"
     url: "assets/Xiao_Ouyang_CV.pdf"
     label: "CV"
+    protected: true
   - icon: "transcript"
     url: "assets/Xiao_Ouyang_Transcript.pdf"
     label: { en: "Transcript", zh: "成绩单" }
+    protected: true
   - icon: "wechat"
     url: "assets/wechat-qr.png"
     label: { en: "WeChat", zh: "微信" }
+    protected: true
 
 # -- Research Interests (paragraphs, supports HTML) --
 research:

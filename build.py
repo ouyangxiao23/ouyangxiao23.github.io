@@ -6,7 +6,7 @@ Usage:
     python build.py          Build index.html from content.yaml
     python build.py --init   Generate a blank content.yaml template
 """
-import sys, html as html_mod
+import sys, html as html_mod, hashlib
 
 try:
     import yaml
@@ -64,8 +64,9 @@ def build_links(links):
         icon_svg = ICONS.get(lnk["icon"], "")
         target = ' target="_blank" rel="noopener"' if not lnk["url"].startswith("mailto:") else ""
         label = bi(lnk["label"])
+        protected = ' data-protected' if lnk.get("protected") else ""
         parts.append(
-            f'                        <a href="{lnk["url"]}"{target} title="{lnk.get("title", "")}">\n'
+            f'                        <a href="{lnk["url"]}"{target}{protected} title="{lnk.get("title", "")}">\n'
             f'                            {icon_svg}\n'
             f'                            <span>{label}</span>\n'
             f'                        </a>'
@@ -193,6 +194,10 @@ def build_leadership(leaders, social_practice):
 def build_html(c):
     affil_en = "<br>".join(c["affiliation"]["en"])
     affil_zh = "<br>".join(c["affiliation"]["zh"])
+
+    # Compute SHA-256 hash of the password for client-side verification
+    password = c.get("password", "")
+    pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -350,6 +355,33 @@ def build_html(c):
         </div>
     </footer>
 
+    <!-- Password Modal -->
+    <div class="pw-overlay" id="pw-overlay">
+        <div class="pw-modal">
+            <p class="pw-title">
+                <span class="lang-en">This file is password-protected</span>
+                <span class="lang-zh">此文件需要密码访问</span>
+            </p>
+            <input type="password" class="pw-input" id="pw-input"
+                   placeholder="Enter password" autocomplete="off">
+            <p class="pw-error" id="pw-error">
+                <span class="lang-en">Incorrect password</span>
+                <span class="lang-zh">密码错误</span>
+            </p>
+            <div class="pw-actions">
+                <button class="pw-btn pw-cancel" id="pw-cancel">
+                    <span class="lang-en">Cancel</span>
+                    <span class="lang-zh">取消</span>
+                </button>
+                <button class="pw-btn pw-submit" id="pw-submit">
+                    <span class="lang-en">Submit</span>
+                    <span class="lang-zh">确认</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>window.__pwHash="{pw_hash}";</script>
     <script src="main.js"></script>
 </body>
 </html>
@@ -394,8 +426,12 @@ stats:
 # -- Contact & Links --
 email: "your@email.edu"
 
+# Password to protect sensitive links (leave empty to disable)
+password: ""
+
 links:
   # icon options: email, github, cv, transcript, wechat
+  # add "protected: true" to require password
   - icon: "email"
     url: "mailto:your@email.edu"
     label: "Email"
@@ -405,12 +441,15 @@ links:
   - icon: "cv"
     url: "assets/CV.pdf"
     label: "CV"
+    protected: true
   - icon: "transcript"
     url: "assets/Transcript.pdf"
     label: { en: "Transcript", zh: "成绩单" }
+    protected: true
   - icon: "wechat"
     url: "assets/wechat-qr.jpg"
     label: { en: "WeChat", zh: "微信" }
+    protected: true
 
 # -- Research Interests (list of paragraphs, HTML allowed) --
 research:

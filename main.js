@@ -71,3 +71,60 @@ langToggle.addEventListener('click', () => {
     const isZh = document.body.classList.contains('zh');
     setLang(isZh ? 'en' : 'zh');
 });
+
+// Password protection for sensitive links
+(() => {
+    const overlay = document.getElementById('pw-overlay');
+    const input = document.getElementById('pw-input');
+    const error = document.getElementById('pw-error');
+    const submitBtn = document.getElementById('pw-submit');
+    const cancelBtn = document.getElementById('pw-cancel');
+    const expectedHash = window.__pwHash;
+    let pendingUrl = null;
+
+    if (!overlay || !expectedHash) return;
+
+    async function sha256(text) {
+        const data = new TextEncoder().encode(text);
+        const buf = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    function openModal(url) {
+        pendingUrl = url;
+        input.value = '';
+        error.classList.remove('visible');
+        overlay.classList.add('open');
+        setTimeout(() => input.focus(), 50);
+    }
+
+    function closeModal() {
+        overlay.classList.remove('open');
+        pendingUrl = null;
+    }
+
+    async function submit() {
+        const hash = await sha256(input.value);
+        if (hash === expectedHash) {
+            sessionStorage.setItem('pw_ok', '1');
+            closeModal();
+            if (pendingUrl) window.open(pendingUrl, '_blank');
+        } else {
+            error.classList.add('visible');
+            input.select();
+        }
+    }
+
+    document.querySelectorAll('a[data-protected]').forEach(link => {
+        link.addEventListener('click', e => {
+            if (sessionStorage.getItem('pw_ok')) return;
+            e.preventDefault();
+            openModal(link.href);
+        });
+    });
+
+    submitBtn.addEventListener('click', submit);
+    cancelBtn.addEventListener('click', closeModal);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+})();
