@@ -207,7 +207,7 @@ def build_html(c):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{c["name"]["en"]} | {c["affiliation"]["en"][-1]}</title>
+    <title>{c["name"]["en"]} | {c["name"]["zh"]}</title>
     <meta name="description" content="{c["name"]["en"]} ({c["name"]["zh"]}) — {c["affiliation"]["en"][0]}, {c["affiliation"]["en"][-1]}">
     <meta name="keywords" content="{c["name"]["en"]}, {c["name"]["zh"]}, {c["affiliation"]["en"][-1]}, computer science, embodied intelligence, robotics">
     <meta property="og:title" content="{c["name"]["en"]} | {c["affiliation"]["en"][-1]}">
