@@ -234,7 +234,7 @@ def build_html(c):
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about"><span class="lang-en">About</span><span class="lang-zh">关于</span></a></li>
                 <li><a href="#research"><span class="lang-en">Research</span><span class="lang-zh">研究</span></a></li>
-                <li><a href="#publications">Publications</a></li>
+                <li><a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文发表</span></a></li>
                 <li><a href="#resexp"><span class="lang-en">Experience</span><span class="lang-zh">研究经历</span></a></li>
                 <li><a href="#honors"><span class="lang-en">Honors</span><span class="lang-zh">荣誉</span></a></li>
                 <li><a href="#experience"><span class="lang-en">Leadership</span><span class="lang-zh">学生工作</span></a></li>
@@ -290,7 +290,10 @@ def build_html(c):
     <!-- Publications -->
     <section class="section" id="publications">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
+            <h2 class="section-title">
+                <span class="lang-en">Publications</span>
+                <span class="lang-zh">论文发表</span>
+            </h2>
             <div class="pub-list">
 {build_publications(c["publications"])}
             </div>

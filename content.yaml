@@ -27,7 +27,7 @@ tagline:
   zh: >-
     我目前在清华大学计算机系<a href="https://ml.cs.tsinghua.edu.cn/" target="_blank"
     rel="noopener">TSAIL实验室</a><a href="https://www.suhangss.me/" target="_blank"
-    rel="noopener">苏航教授</a>课题组进行科研，研究方向为<strong>具身智能</strong>——探索机器人跨体型零样本泛化学习。
+    rel="noopener">苏航教授</a>课题组进行科研，研究方向为<strong>高泛化性的具身模型与具身数据</strong>。
 
 # -- Academic Stats --
 stats:
@@ -61,7 +61,7 @@ links:
     url: "assets/Xiao_Ouyang_Transcript.pdf"
     label: { en: "Transcript", zh: "成绩单" }
   - icon: "wechat"
-    url: "assets/wechat-qr.jpg"
+    url: "assets/wechat-qr.png"
     label: { en: "WeChat", zh: "微信" }
 
 # -- Research Interests (paragraphs, supports HTML) --
@@ -99,7 +99,7 @@ publications:
     authors: "Songming Liu*, Bangguo Li*, Kai Ma*, Lingxuan Wu*, Hengkai Tan, <strong>Xiao Ouyang</strong>, Hang Su, Jun Zhu"
     equal_contribution: "* Equal Contribution"
     venue: "arXiv preprint, 2026"
-    thumbnail: "assets/rdt2-thumb.jpg"
+    thumbnail: "assets/rdt2-thumb.png"
     links:
       - label: "arXiv"
         url: "https://arxiv.org/abs/2602.03310"
@@ -136,10 +136,10 @@ research_experience:
 # -- Honors & Awards --
 honors:
   - name: { en: "National Scholarship", zh: "国家奖学金" }
-    note: { en: "Top national undergraduate award in China", zh: "中国本科生最高荣誉奖学金之一" }
+    note: { en: "Top national undergraduate award in China", zh: "系级最高奖学金" }
     year: "2025"
   - name: { en: "Social Practice Scholarship", zh: "社会实践奖学金" }
-    note: { en: "Tsinghua University", zh: "清华大学" }
+    note: { en: "Tsinghua University", zh: "系级奖学金" }
     year: "2024"
   - name: { en: "Challenge Cup Capital Competition, Third Prize", zh: "\"青创北京\"首都大学生课外学术科技作品竞赛 三等奖" }
     note: { en: "\"青创北京\" — China's premier undergraduate science competition", zh: "全国大学生课外学术科技竞赛" }
@@ -150,7 +150,7 @@ honors:
 
 # -- Leadership & Service --
 leadership:
-  - role: { en: "Committee Member, 36th CS Department Student Union", zh: "计算机系第36届学生会 委员" }
+  - role: { en: "Committee Member, 36th CS Department Student Union", zh: "计算机系第36届共青团 委员" }
     date: "2025 – Present"
     desc: { en: "Coordinating academic and community events for 170+ undergraduate students in the Department of Computer Science.", zh: "负责协调计算机系170余名本科生的学术与社区活动。" }
   - role: { en: "Executive Board, Low-Altitude Economy Association", zh: "清华大学学生低空经济协会 会长团成员" }
