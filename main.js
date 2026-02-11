@@ -42,3 +42,32 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
+
+// Language toggle
+const langToggle = document.getElementById('lang-toggle');
+const langOpts = langToggle.querySelectorAll('.lang-opt');
+
+function setLang(lang) {
+    document.body.classList.toggle('zh', lang === 'zh');
+    document.documentElement.lang = lang;
+    langOpts.forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+    });
+    localStorage.setItem('lang', lang);
+}
+
+// Restore saved language preference
+const savedLang = localStorage.getItem('lang');
+if (savedLang) {
+    setLang(savedLang);
+} else {
+    // Default to English, mark EN as active
+    langOpts.forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === 'en');
+    });
+}
+
+langToggle.addEventListener('click', () => {
+    const isZh = document.body.classList.contains('zh');
+    setLang(isZh ? 'en' : 'zh');
+});

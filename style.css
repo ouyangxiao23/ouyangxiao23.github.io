@@ -39,6 +39,14 @@ img {
     padding: 0 24px;
 }
 
+/* ===== Language Switching ===== */
+.lang-zh { display: none; }
+body.zh .lang-en { display: none; }
+body.zh span.lang-zh { display: inline; }
+body.zh div.lang-zh { display: block; }
+body.zh p.lang-zh { display: block; }
+body.zh ul.lang-zh { display: block; }
+
 /* ===== Navigation ===== */
 .navbar {
     position: fixed;
@@ -75,6 +83,46 @@ img {
 
 .nav-name:hover {
     color: #1a5276;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: none;
+    border: 1px solid #d5dde5;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.78rem;
+    color: #6c757d;
+    transition: border-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+    border-color: #1a5276;
+}
+
+.lang-sep {
+    color: #d5dde5;
+    margin: 0 1px;
+}
+
+.lang-opt {
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.lang-opt.active {
+    color: #1a5276;
+    font-weight: 700;
 }
 
 .nav-links {
