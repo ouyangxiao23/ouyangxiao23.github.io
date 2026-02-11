@@ -6,7 +6,7 @@ Usage:
     python build.py          Build index.html from content.yaml
     python build.py --init   Generate a blank content.yaml template
 """
-import sys, html as html_mod, hashlib
+import sys, html as html_mod, hashlib, time
 
 try:
     import yaml
@@ -199,6 +199,9 @@ def build_html(c):
     password = c.get("password", "")
     pw_hash = hashlib.sha256(password.encode()).hexdigest() if password else ""
 
+    # Cache-busting version string
+    ver = str(int(time.time()))
+
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -213,7 +216,7 @@ def build_html(c):
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v={ver}">
 </head>
 <body>
 
@@ -382,7 +385,7 @@ def build_html(c):
     </div>
 
     <script>window.__pwHash="{pw_hash}";</script>
-    <script src="main.js"></script>
+    <script src="main.js?v={ver}"></script>
 </body>
 </html>
 '''
