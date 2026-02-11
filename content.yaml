@@ -1,0 +1,173 @@
+# ============================================================
+# Site Content — Edit this file, then run: python build.py
+# ============================================================
+
+# -- Personal Info --
+name:
+  en: "Xiao Ouyang"
+  zh: "欧阳霄"
+
+affiliation:
+  en:
+    - "3rd Year Undergraduate"
+    - "Department of Computer Science and Technology"
+    - "Tsinghua University"
+  zh:
+    - "本科三年级"
+    - "计算机科学与技术系"
+    - "清华大学"
+
+tagline:
+  en: >-
+    I am currently conducting research as a student researcher in
+    <a href="https://www.suhangss.me/" target="_blank" rel="noopener">Prof. Hang Su</a>'s
+    group at <a href="https://ml.cs.tsinghua.edu.cn/" target="_blank" rel="noopener">TSAIL Lab</a>,
+    working on <strong>Embodied Intelligence</strong> — scaling robot learning for
+    cross-embodiment generalization.
+  zh: >-
+    我目前在清华大学计算机系<a href="https://ml.cs.tsinghua.edu.cn/" target="_blank"
+    rel="noopener">TSAIL实验室</a><a href="https://www.suhangss.me/" target="_blank"
+    rel="noopener">苏航教授</a>课题组进行科研，研究方向为<strong>具身智能</strong>——探索机器人跨体型零样本泛化学习。
+
+# -- Academic Stats --
+stats:
+  - value: "3.888"
+    unit: "/4.0"
+    label: { en: "GPA", zh: "GPA" }
+  - value: "Top 14%"
+    unit: " (24/172)"
+    label: { en: "Rank", zh: "排名" }
+  - value: "8.5"
+    unit: "/9"
+    label: { en: "IELTS", zh: "IELTS" }
+  - value: "645"
+    unit: ""
+    label: { en: "CET-6", zh: "六级" }
+
+# -- Contact & Links --
+email: "oyx23@mails.tsinghua.edu.cn"
+
+links:
+  - icon: "email"
+    url: "mailto:oyx23@mails.tsinghua.edu.cn"
+    label: "Email"
+  - icon: "github"
+    url: "https://github.com/ouyangxiao23"
+    label: "GitHub"
+  - icon: "cv"
+    url: "assets/Xiao_Ouyang_CV.pdf"
+    label: "CV"
+  - icon: "transcript"
+    url: "assets/Xiao_Ouyang_Transcript.pdf"
+    label: { en: "Transcript", zh: "成绩单" }
+  - icon: "wechat"
+    url: "assets/wechat-qr.jpg"
+    label: { en: "WeChat", zh: "微信" }
+
+# -- Research Interests (paragraphs, supports HTML) --
+research:
+  en:
+    - >-
+      My research interest lies in <strong>Embodied Intelligence</strong>, with a
+      particular focus on enabling robots to generalize across different embodiments
+      and environments. I believe that building truly versatile robotic systems
+      requires learning from large-scale, diverse data sources and developing
+      foundation models that can transfer knowledge across morphologically different
+      platforms.
+    - >-
+      Currently, I am working on scaling Universal Manipulation Interface (UMI) data
+      to push the limits of zero-shot cross-embodiment generalization. This involves
+      developing robust diffusion-based policy learning methods and exploring how
+      vision-language-action models can serve as a bridge between high-level task
+      understanding and low-level motor control.
+    - >-
+      Looking ahead, I aim to pursue doctoral research on building generalizable
+      robotic foundation models that can acquire, represent, and transfer manipulation
+      skills across diverse robot platforms — bridging the gap between data-driven
+      learning and real-world robotic deployment.
+  zh:
+    - >-
+      我的研究兴趣在于<strong>具身智能</strong>，特别关注如何让机器人在不同硬件平台和环境之间实现泛化。我认为，构建真正通用的机器人系统需要从大规模、多样化的数据源中学习，并开发能够在形态各异的平台之间迁移知识的基础模型。
+    - >-
+      目前，我正致力于扩展通用操控接口（UMI）数据的规模，以突破零样本跨体型泛化的极限。具体工作包括开发基于扩散模型的稳健策略学习方法，以及探索视觉-语言-动作模型如何作为高层任务理解与底层运动控制之间的桥梁。
+    - >-
+      展望未来，我希望在博士阶段研究可泛化的机器人基础模型，使其能够在多样化的机器人平台上获取、表征和迁移操控技能——弥合数据驱动学习与真实世界机器人部署之间的鸿沟。
+
+# -- Publications (paper content stays in English) --
+publications:
+  - title: "RDT-2: Exploring the Scaling Limit of UMI Data Towards Zero-Shot Cross-Embodiment Generalization"
+    authors: "Songming Liu*, Bangguo Li*, Kai Ma*, Lingxuan Wu*, Hengkai Tan, <strong>Xiao Ouyang</strong>, Hang Su, Jun Zhu"
+    equal_contribution: "* Equal Contribution"
+    venue: "arXiv preprint, 2026"
+    thumbnail: "assets/rdt2-thumb.jpg"
+    links:
+      - label: "arXiv"
+        url: "https://arxiv.org/abs/2602.03310"
+      - label: "Project Page"
+        url: "https://rdt-robotics.github.io/rdt2/"
+      - label: "Code"
+        url: "https://github.com/thu-ml/RDT2"
+
+# -- Research Experience --
+research_experience:
+  - role: { en: "Student Researcher", zh: "本科生研究员" }
+    org:
+      name: "TSAIL Lab"
+      url: "https://ml.cs.tsinghua.edu.cn/"
+      affiliation: { en: "Dept. of Computer Science, Tsinghua University", zh: "清华大学计算机科学与技术系" }
+    advisor:
+      en: >-
+        Advised by <a href="https://www.suhangss.me/" target="_blank" rel="noopener">Prof. Hang Su</a>
+        and <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank" rel="noopener">Prof. Jun Zhu</a>
+      zh: >-
+        导师：<a href="https://www.suhangss.me/" target="_blank" rel="noopener">苏航教授</a>、<a
+        href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank" rel="noopener">朱军教授</a>
+    date: "2025 – Present"
+    details:
+      en:
+        - "Explored scaling Universal Manipulation Interface (UMI) data for zero-shot cross-embodiment generalization in robotic manipulation."
+        - "Investigated diffusion-based policy architectures for learning generalizable motor skills across morphologically diverse robot platforms."
+        - "Contributed to the RDT-2 project, examining the scaling limits of robot foundation models trained on large-scale multi-embodiment datasets."
+      zh:
+        - "探索扩展通用操控接口（UMI）数据规模，实现机器人操控的零样本跨体型泛化。"
+        - "研究基于扩散模型的策略架构，学习可在形态各异的机器人平台间迁移的通用运动技能。"
+        - "参与 RDT-2 项目，探究基于大规模多体型数据集训练的机器人基础模型的 scaling 极限。"
+
+# -- Honors & Awards --
+honors:
+  - name: { en: "National Scholarship", zh: "国家奖学金" }
+    note: { en: "Top national undergraduate award in China", zh: "中国本科生最高荣誉奖学金之一" }
+    year: "2025"
+  - name: { en: "Social Practice Scholarship", zh: "社会实践奖学金" }
+    note: { en: "Tsinghua University", zh: "清华大学" }
+    year: "2024"
+  - name: { en: "Challenge Cup Capital Competition, Third Prize", zh: "\"青创北京\"首都大学生课外学术科技作品竞赛 三等奖" }
+    note: { en: "\"青创北京\" — China's premier undergraduate science competition", zh: "全国大学生课外学术科技竞赛" }
+    year: "2025"
+  - name: { en: "Future Jam Innovation Competition, First Place", zh: "清华×中传第四届 Future Jam 团体第一名" }
+    note: { en: "Tsinghua × CUC, 4th Edition", zh: "清华大学与中国传媒大学联合举办" }
+    year: "2024"
+
+# -- Leadership & Service --
+leadership:
+  - role: { en: "Committee Member, 36th CS Department Student Union", zh: "计算机系第36届学生会 委员" }
+    date: "2025 – Present"
+    desc: { en: "Coordinating academic and community events for 170+ undergraduate students in the Department of Computer Science.", zh: "负责协调计算机系170余名本科生的学术与社区活动。" }
+  - role: { en: "Executive Board, Low-Altitude Economy Association", zh: "清华大学学生低空经济协会 会长团成员" }
+    date: "2025"
+    desc: { en: "Co-built an interdisciplinary student organization bridging computer science, aerospace engineering, and public policy.", zh: "参与创建跨学科学生组织，连接计算机科学、航空航天工程与公共政策领域。" }
+  - role: { en: "Department Head, Zhishan Academy Science & Technology Association", zh: "至善书院学生科学技术协会 学习交流部部长" }
+    date: "2024 – 2025"
+    desc: { en: "Led the learning and exchange division, organizing technical workshops and peer study sessions.", zh: "主持学习交流部工作，组织技术研讨会和朋辈学习活动。" }
+
+social_practice:
+  en: >-
+    Led and participated in field research teams across <strong>6 regions</strong> —
+    including Guangdong, Fujian, Australia, Northeast China, Xinjiang, and Xi'an —
+    investigating topics from low-altitude economy to digital transformation.
+    Recognized with university Gold and Silver awards for multiple expeditions.
+  zh: >-
+    作为支队长和队员参与<strong>6个地区</strong>的实地调研——覆盖广东、福建、澳大利亚、东北、新疆库尔勒及西安——调研主题涵盖低空经济、数字中国、数字文化等领域。多次获得校级金奖、银奖和系级金奖、银奖。
+
+# -- Footer --
+last_updated: { en: "Last updated: February 2026", zh: "最后更新：2026年2月" }
