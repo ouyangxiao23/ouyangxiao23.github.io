@@ -72,6 +72,26 @@ langToggle.addEventListener('click', () => {
     setLang(isZh ? 'en' : 'zh');
 });
 
+// Dark mode toggle
+const themeToggle = document.getElementById('theme-toggle');
+
+function setTheme(dark) {
+    document.body.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+
+// Restore saved theme, or use system preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    setTheme(savedTheme === 'dark');
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme(true);
+}
+
+themeToggle.addEventListener('click', () => {
+    setTheme(!document.body.classList.contains('dark'));
+});
+
 // Password protection for sensitive links
 (() => {
     const overlay = document.getElementById('pw-overlay');

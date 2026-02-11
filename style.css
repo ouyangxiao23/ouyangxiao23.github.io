@@ -770,6 +770,156 @@ body.zh ul.lang-zh { display: block; }
     color: #adb5bd;
 }
 
+/* ===== Theme Toggle ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid #d5dde5;
+    border-radius: 4px;
+    padding: 4px 7px;
+    cursor: pointer;
+    color: #6c757d;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    border-color: #1a5276;
+    color: #1a5276;
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.theme-toggle .icon-moon { display: none; }
+body.dark .theme-toggle .icon-sun { display: none; }
+body.dark .theme-toggle .icon-moon { display: block; }
+
+/* ===== Dark Mode ===== */
+body.dark {
+    color: #e6edf3;
+    background: #0d1117;
+}
+
+body.dark a { color: #58a6ff; }
+body.dark a:hover { color: #79c0ff; }
+
+body.dark .navbar {
+    background: rgba(13, 17, 23, 0.85);
+}
+
+body.dark .navbar.scrolled {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .nav-name { color: #e6edf3; }
+body.dark .nav-name:hover { color: #58a6ff; }
+body.dark .nav-toggle span { background: #e6edf3; }
+
+body.dark .nav-links a { color: #8b949e; }
+body.dark .nav-links a:hover,
+body.dark .nav-links a.active { color: #58a6ff; }
+body.dark .nav-links a.active::after { background: #58a6ff; }
+
+body.dark .lang-toggle,
+body.dark .theme-toggle {
+    border-color: #30363d;
+    color: #8b949e;
+}
+
+body.dark .lang-toggle:hover,
+body.dark .theme-toggle:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+body.dark .lang-sep { color: #30363d; }
+body.dark .lang-opt.active { color: #58a6ff; }
+
+body.dark .hero-text h1 { color: #e6edf3; }
+body.dark .name-cn { color: #8b949e; }
+body.dark .hero-affiliation { color: #8b949e; }
+
+body.dark .hero-stats {
+    border-color: #30363d;
+}
+
+body.dark .stat-value { color: #58a6ff; }
+body.dark .stat-unit { color: #8b949e; }
+body.dark .stat-label { color: #8b949e; }
+body.dark .stat-divider { background: #30363d; }
+
+body.dark .icon-row a {
+    color: #58a6ff;
+    border-color: #30363d;
+}
+
+body.dark .icon-row a:hover {
+    background: #58a6ff;
+    color: #0d1117;
+    border-color: #58a6ff;
+}
+
+body.dark .section-alt { background: #161b22; }
+body.dark .section-title { color: #e6edf3; }
+body.dark .section-title::after { background: #58a6ff; }
+
+body.dark .pub-thumb { border-color: #30363d; }
+body.dark .pub-title a { color: #58a6ff; }
+body.dark .pub-title a:hover { color: #79c0ff; }
+body.dark .pub-authors { color: #c9d1d9; }
+body.dark .pub-equal { color: #8b949e; }
+body.dark .pub-venue { color: #8b949e; }
+body.dark .pub-link { background: #58a6ff; color: #0d1117; }
+body.dark .pub-link:hover { background: #79c0ff; color: #0d1117; }
+
+body.dark .resexp-item {
+    background: #161b22;
+    border-color: #30363d;
+}
+
+body.dark .section-alt .resexp-item { background: #0d1117; }
+body.dark .resexp-role { color: #e6edf3; }
+body.dark .resexp-org { color: #8b949e; }
+body.dark .resexp-advisor { color: #8b949e; }
+body.dark .resexp-date { color: #8b949e; }
+body.dark .resexp-details li { color: #c9d1d9; }
+body.dark .resexp-details li::before { background: #58a6ff; }
+
+body.dark .honors-list li { border-color: #30363d; }
+body.dark .honor-year { color: #8b949e; }
+body.dark .honor-note { color: #8b949e; }
+
+body.dark .exp-heading { color: #58a6ff; }
+body.dark .exp-item { border-color: #30363d; }
+body.dark .exp-date { color: #8b949e; }
+body.dark .exp-desc { color: #c9d1d9; }
+
+body.dark .footer { border-color: #30363d; color: #8b949e; }
+body.dark .footer-update { color: #484f58; }
+
+body.dark .pw-modal {
+    background: #161b22;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .pw-title { color: #e6edf3; }
+
+body.dark .pw-input {
+    background: #0d1117;
+    border-color: #30363d;
+    color: #e6edf3;
+}
+
+body.dark .pw-input:focus { border-color: #58a6ff; }
+body.dark .pw-cancel { background: #21262d; color: #c9d1d9; }
+body.dark .pw-cancel:hover { background: #30363d; }
+body.dark .pw-submit { background: #58a6ff; color: #0d1117; }
+body.dark .pw-submit:hover { background: #79c0ff; }
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .hero {
@@ -830,6 +980,11 @@ body.zh ul.lang-zh { display: block; }
         padding: 16px 24px;
         gap: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    body.dark .nav-links {
+        background: rgba(13, 17, 23, 0.98);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.open {
