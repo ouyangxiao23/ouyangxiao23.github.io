@@ -362,6 +362,11 @@ def build_html(c):
                 &middot; {c["email"]}
             </p>
             <p class="footer-update">{bi(c["last_updated"])}</p>
+            <p class="footer-visitors">
+                <span class="lang-en">Total visitors: </span>
+                <span class="lang-zh">总访问人数：</span>
+                <span id="busuanzi_value_site_uv"></span>
+            </p>
         </div>
     </footer>
 
@@ -392,6 +397,7 @@ def build_html(c):
     </div>
 
     <script>window.__pwHash="{pw_hash}";</script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="main.js?v={ver}"></script>
 </body>
 </html>
