@@ -156,12 +156,15 @@ honors:
 
 # -- Leadership & Service --
 leadership:
-  - role: { en: "Committee Member, 36th CS Department Student Union", zh: "计算机系第36届共青团 委员" }
+  - role: { en: "Committee Member, 36th CS Department Student Union", zh: "计算机系第36届共青团团委 委员" }
     date: "2025 – Present"
-    desc: { en: "Coordinating academic and community events for 170+ undergraduate students in the Department of Computer Science.", zh: "负责协调计算机系170余名本科生的学术与社区活动。" }
+    desc: { en: "Coordinating academic and community events for 170+ undergraduate students in the Department of Computer Science.", zh: "负责协调计算机系本科生社工活动。" }
   - role: { en: "Executive Board, Low-Altitude Economy Association", zh: "清华大学学生低空经济协会 会长团成员" }
-    date: "2025"
-    desc: { en: "Co-built an interdisciplinary student organization bridging computer science, aerospace engineering, and public policy.", zh: "参与创建跨学科学生组织，连接计算机科学、航空航天工程与公共政策领域。" }
+    date: "2025 - 2026"
+    desc: { en: "Co-built an interdisciplinary student organization bridging computer science, aerospace engineering, and public policy.", zh: "参与创建跨学科学生组织，连接计算机科学、电子工程、机械设计、与金融管理领域。" }
+  - role: { en: "Vice Secretary, 36th CS Department Student Union", zh: "计算机系团委实践组 组长" }
+    date: "2025 – Present"
+    desc: { en: "Coordinating academic and community events for 170+ undergraduate students in the Department of Computer Science.", zh: "组织超过20场计算机系社会实践，负责计算机系社会实践工作的校级评比评优" }
   - role: { en: "Department Head, Zhishan Academy Science & Technology Association", zh: "至善书院学生科学技术协会 学习交流部部长" }
     date: "2024 – 2025"
     desc: { en: "Led the learning and exchange division, organizing technical workshops and peer study sessions.", zh: "主持学习交流部工作，组织技术研讨会和朋辈学习活动。" }
@@ -173,7 +176,7 @@ social_practice:
     investigating topics from low-altitude economy to digital transformation.
     Recognized with university Gold and Silver awards for multiple expeditions.
   zh: >-
-    作为支队长和队员参与<strong>6个地区</strong>的实地调研——覆盖广东、福建、澳大利亚、东北、新疆库尔勒及西安——调研主题涵盖低空经济、数字中国、数字文化等领域。多次获得校级金奖、银奖和系级金奖、银奖。
+    作为支队长（2次）和队员参与<strong>6个地区</strong>的实地调研——覆盖广东、福建、澳大利亚、东北、新疆库尔勒及西安——调研主题涵盖低空经济、数字中国、数字文化等领域。多次获得校级金奖、银奖和系级金奖、银奖。
 
 # -- Footer --
 last_updated: { en: "Last updated: February 2026", zh: "最后更新：2026年2月" }
